@@ -20,6 +20,16 @@ Install its dependencies:
 yarn install
 ```
 
+## Development
+
+When developing, use the webpack app set-up in the `app/` folder to reload any changes to the library.
+
+```bash
+cd app
+yarn install
+yarn start
+```
+
 ## Available Scripts
 
 ### `yarn build`
