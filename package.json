@@ -10,7 +10,8 @@
   "scripts": {
     "build": "rollup -c",
     "test": "jest --coverage",
-    "test:tdd": "jest --watch"
+    "test:tdd": "jest --watch",
+    "prepublishOnly": "yarn build"
   },
   "devDependencies": {
     "@babel/core": "^7.8.3",
@@ -44,6 +45,11 @@
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
   "lint-staged": {
     "*.{js,svelte}": [
       "eslint --fix 'src/**'"
@@ -72,5 +78,21 @@
       "regenerator-runtime/runtime",
       "@testing-library/jest-dom/extend-expect"
     ]
-  }
+  },
+  "files": [
+    "lib",
+    "src"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/metonym/template-lib-svelte.git"
+  },
+  "homepage": "https://github.com/metonym/template-lib-svelte",
+  "bugs": "https://github.com/metonym/template-lib-svelte/issues",
+  "keywords": [
+    "svelte",
+    "svelte 3",
+    "component",
+    "template"
+  ]
 }

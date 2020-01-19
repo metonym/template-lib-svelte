@@ -66,45 +66,6 @@ if (UMD) {
 }
 ```
 
-### 2) Add Publishing Metadata
-
-```js
-// package.json
-{
-  "files": ["lib", "src"], // `src` must be included for the `svelte` entry
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/<USER_NAME>/<REPO_NAME>.git"
-  },
-  "homepage": "https://github.com/<USER_NAME>/<REPO_NAME>"
-}
-```
-
-### 3) Publishing
-
-**Important**: Build the library in the UMD, ES formats before publishing:
-
-```sh
-yarn build
-```
-
-Publish the package to `npm`.
-
-```sh
-yarn publish
-```
-
-**Recommendation**: Add the `prepublishOnly` command to [package.json](package.json) to automatically run the build script before publishing the package.
-
-```diff
-// package.json
-{
-  "scripts": {
-+   "prepublishOnly": "yarn build"
-  }
-}
-```
-
 ## License
 
 [MIT](LICENSE)
