@@ -41,7 +41,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged && pretty-quick --pattern 'src/**/*.{js,svelte}' --staged",
+      "pre-commit": "lint-staged && pretty-quick --pattern '**/*.{js,svelte}' --staged",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
@@ -52,7 +52,7 @@
   },
   "lint-staged": {
     "*.{js,svelte}": [
-      "eslint --fix 'src/**'"
+      "eslint --fix"
     ]
   },
   "prettier": {
