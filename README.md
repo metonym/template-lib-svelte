@@ -5,6 +5,14 @@
 
 > Template for building Svelte component libraries.
 
+## Workflow
+
+- **Development**: develop the library using a webpack set-up ([`app/`](app/))
+- **Testing**: unit test the library using [Jest](https://github.com/facebook/jest) and [@testing-library/svelte](https://github.com/testing-library/svelte-testing-library)
+- **Building**: build the library using [Rollup](https://github.com/rollup/rollup) to support ES/UMD formats
+- **Publishing**: publish the library to [NPM](https://www.npmjs.com/)
+- **Documentation**: deploy the compiled webpack set-up to [GitHub Pages](https://pages.github.com/)
+
 ## Getting Started
 
 Clone the repository:
